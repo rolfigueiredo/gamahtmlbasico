@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Wars</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="fade"></div>
+  <div class="starwars">
+    <div class="crawl">
+      <div class="title">
+        <p>Episódio 489</p>
+        <h2>A Falta do que Fazer</h2>
+      </div>
+      <p>Não tenho nada de útil para escrever aqui, mas achei que seria legal acrescentar esse efeito.</p>
+      <p>Vamos conversar um pouco, eu não gosto de Star Wars, vocês gostam? O que me contam de novo?</p>
+      <p>30 segundos das suas vidas que vocês não vão ter de volta.</p>
+      <p>De nada</p>
+    </div>
+  </div>
+
+  <header>
+    <h1 class="titulo">Star Wars</h1>
+  </header>
+  <main>
+    <hr>
+    <div class="pesquisa">
+      <h2>Escolha o personagem para saber mais</h2>
+      <select id="selectPersonagem">
+        <option id="carregando" value="">Carregando...</option>
+      </select>
+    </div>
+    <hr>
+    <div id="resultado"></div>
+  </main>
+  <audio>
+    <source src="audio/sound.mp3"></source>
+    Atualize o seu browser
+  </audio>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

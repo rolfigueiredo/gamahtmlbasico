@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Starjedi";
+  src: url('Starjedi.ttf') format('truetype');
+}
+
+:root {
+  --amarelo: #f9d71c;
+  --fonte: 'Starjedi', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: var(--amarelo);
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url('../img/galaxy.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fadeIn .8s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  top: -25px;
+  background-image: linear-gradient(0, transparent, black 75%);
+  z-index: 1;
+}
+
+.starwars {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  perspective: 350px;
+  color: var(--amarelo);
+  font-size: 350%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: -1000px;
+  transform-origin: 50% 100%;
+  animation: crawl 50s linear forwards;
+}
+
+@keyframes crawl {
+  0% {
+    opacity: 0;
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% { 
+    top: -5000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+.title h2 {
+  font-family: var(--fonte);
+  margin-bottom: 10rem;
+}
+
+.titulo {
+  font-family: var(--fonte);
+  font-size: 3rem;
+}
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+main {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+hr {
+  margin: 4rem 0;
+  box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px #0000ff,0 0 25px #0000ff;
+}
+
+select {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.2rem;
+  border: 1px solid var(--amarelo);
+  border-radius: 5px;
+  outline: none;
+}
+
+option {
+  background-color: #232323;
+}
+
+#resultado {
+  opacity: 0;
+}
+
+.nome {
+  margin: 2rem;
+}
+
+.nome a {
+  position: relative;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: var(--amarelo);
+  text-decoration: none;
+}
+
+.nome a::after {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px #0000ff,0 0 25px #0000ff;
+  transition: all .2s;
+}
+
+.nome a:hover::after {
+  height: 2px;
+  box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px #0000ff,0 0 25px #0000ff;
+}
+
+/* .modal-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, .5);
+}
+
+.modal {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #e9e9e9;
+  color: #232323;
+  box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px #f9d71c,0 0 25px #f9d71c;
+}
+
+.modal h2 {
+  font-family: 'Starjedi', sans-serif;
+}
+
+.modal p {
+  font-size: 1.2rem;
+} */
